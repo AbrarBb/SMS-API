@@ -86,8 +86,5 @@ This is a **CRUCIAL** step for security and functionality.
 
 Once the script starts, you will see a menu:
 
-![Alt text]([./images/screenshot.png](https://github.com/AbrarBb/SMS-API/blob/main/Screen/Send.jpg))
-
-![Alt text]([image_url](https://github.com/AbrarBb/SMS-API/blob/main/Screen/Send.jpg))
-
-![Alt text]([image_url](https://github.com/AbrarBb/SMS-API/blob/main/Screen/Track_result.jpg))
+![Send SMS Screenshot](https://raw.githubusercontent.com/AbrarBb/SMS-API/main/Screen/Send.jpg)
+![Track Result Screenshot](https://raw.githubusercontent.com/AbrarBb/SMS-API/main/Screen/Track_result.jpg)
