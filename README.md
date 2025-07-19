@@ -1,12 +1,33 @@
-SMS CLI Tool for e-amarseba.comThis is a simple Python command-line interface (CLI) tool to interact with the e-amarseba.com Bulk SMS and SMS Tracking APIs. It allows you to send SMS messages and check their delivery status directly from your terminal.Important Security Note: This tool requires your x-app-key and x-app-secret. For security, these are loaded from a .env file and should never be hardcoded directly into the script or shared publicly.FeaturesSend SMS: Send messages to one or more contact numbers. (Does not use masking by default).Track SMS: Check the status of a sent SMS using its track_id.PrerequisitesBefore you begin, ensure you have the following installed on your system:Python 3.x: Download from python.org.pip: Python's package installer (usually comes with Python).Setup InstructionsFollow these steps to get the tool up and running:1. Download the ScriptSave the sms_cli.py file to a directory on your computer (e.g., D:\sms-project).2. Install Required LibrariesOpen your terminal (macOS/Linux) or Command Prompt / PowerShell (Windows).Navigate to the directory where you saved sms_cli.py. For example:cd D:\sms-project
-Install the necessary Python libraries using pip:pip install requests python-dotenv
-3. Configure Your API Keys (.env file)This is a CRUCIAL step for security and functionality.In the same directory where you saved sms_cli.py (e.g., D:\sms-project), create a new file named exactly .env (note the dot at the beginning and no file extension).Open this .env file with a plain text editor (like Notepad, VS Code, Sublime Text). Do NOT use word processors like Microsoft Word.Paste the following lines into the .env file, replacing YOUR_X_APP_KEY_HERE and YOUR_X_APP_SECRET_HERE with your actual API credentials obtained from your e-amarseba.com developer dashboard:SMS_API_KEY=YOUR_X_APP_KEY_HERE
-SMS_API_SECRET=YOUR_X_APP_SECRET_HERE
-Important: Ensure there are no extra spaces before or after the = signs, or at the beginning/end of your key/secret values.Save the .env file.How to Run the ToolOpen your terminal and navigate to the directory where sms_cli.py and .env are located (e.g., D:\sms-project).cd D:\sms-project
-Run the Python script:python sms_cli.py
-(If python doesn't work, try python3 sms_cli.py)Using the ToolOnce the script starts, you will see a menu:--- SMS Service Menu ---
-1. Send SMS
-2. Track SMS
-3. Exit
-Enter your choice (1-3):
-1. Send SMS:Enter 1 and press Enter.You will be prompted to enter Contacts (comma-separated phone numbers, e.g., 01712345678,01898765432).You will then be prompted to enter the Message text (maximum 390 characters).The script will attempt to send the SMS and print the API response, including any track_id for successful sends.Note: This tool is configured to not use masking.2. Track SMS:Enter 2 and press Enter.You will be prompted to enter the Track ID of a previously sent SMS.The script will query the API and print the status of that SMS.3. Exit:Enter 3 and press Enter to close the tool.Troubleshooting Common Issuespython: can't open file '...sms_cli.py': [Errno 2] No such file or directorySolution: You are not in the correct directory. Use cd D:\sms-project (or your actual folder path) to navigate to where sms_cli.py is saved before running the python command.API_KEY loaded: 'YOUR_X_APP_KEY_HERE' or WARNING: API keys are still placeholders...Problem: The script is not reading your actual API keys from the .env file.Solution:Ensure the .env file is named exactly .env (no other extensions).Verify the .env file is in the same directory as sms_cli.py.Open .env with a plain text editor and confirm your SMS_API_KEY and SMS_API_SECRET are pasted correctly, with no extra spaces or quotes.After any changes, save the .env file and restart the sms_cli.py script.Error sending SMS: 401 Client Error: Unauthorized for url... App key and secret not matchedProblem: The API keys you provided are not valid or not active for your account on e-amarseba.com.Solution:Double-check your API keys on your e-amarseba.com developer dashboard. Copy them again and paste them precisely into your .env file.If you're certain the keys are correct, contact e-amarseba.com support with your keys and the error message; there might be an issue with your account's API access (e.g., not activated, IP restrictions).
+# SMS CLI Tool for e-amarseba.com
+
+This is a simple Python command-line interface (CLI) tool to interact with the `e-amarseba.com` Bulk SMS and SMS Tracking APIs. It allows you to send SMS messages and check their delivery status directly from your terminal.
+
+**Important Security Note:** This tool requires your `x-app-key` and `x-app-secret`. For security, these are loaded from a `.env` file and should **never** be hardcoded directly into the script or shared publicly.
+
+## Features
+
+* **Send SMS:** Send messages to one or more contact numbers. (Does not use masking by default).
+
+* **Track SMS:** Check the status of a sent SMS using its `track_id`.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+* **Python 3.x:** Download from [python.org](https://www.python.org/downloads/).
+
+* **pip:** Python's package installer (usually comes with Python).
+
+## Setup Instructions
+
+Follow these steps to get the tool up and running:
+
+### 1. Download the Script
+
+* Save the `sms_cli.py` file to a directory on your computer (e.g., `D:\sms-project`).
+
+### 2. Install Required Libraries
+
+* Open your **terminal** (macOS/Linux) or **Command Prompt / PowerShell** (Windows).
+
+* Navigate to the directory where you saved `sms_cli.py`. For example:
