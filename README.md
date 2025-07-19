@@ -85,3 +85,7 @@ This is a **CRUCIAL** step for security and functionality.
 ## Using the Tool
 
 Once the script starts, you will see a menu:
+
+![Alt text]([image_url](https://github.com/AbrarBb/SMS-API/blob/main/Screen/Send.jpg))
+
+![Alt text]([image_url](https://github.com/AbrarBb/SMS-API/blob/main/Screen/Track_result.jpg))
