@@ -31,3 +31,57 @@ Follow these steps to get the tool up and running:
 * Open your **terminal** (macOS/Linux) or **Command Prompt / PowerShell** (Windows).
 
 * Navigate to the directory where you saved `sms_cli.py`. For example:
+
+    ```
+    cd D:\sms-project
+
+    ```
+
+* Install the necessary Python libraries using pip:
+
+    ```
+    pip install requests python-dotenv
+
+    ```
+
+### 3. Configure Your API Keys (`.env` file)
+
+This is a **CRUCIAL** step for security and functionality.
+
+* In the **same directory** where you saved `sms_cli.py` (e.g., `D:\sms-project`), create a new file named **exactly** `.env` (note the dot at the beginning and no file extension).
+
+* Open this `.env` file with a plain text editor (like Notepad, VS Code, Sublime Text). **Do NOT use word processors like Microsoft Word.**
+
+* Paste the following lines into the `.env` file, replacing `YOUR_X_APP_KEY_HERE` and `YOUR_X_APP_SECRET_HERE` with your actual API credentials obtained from your `e-amarseba.com` developer dashboard:
+
+    ```
+    SMS_API_KEY=YOUR_X_APP_KEY_HERE
+    SMS_API_SECRET=YOUR_X_APP_SECRET_HERE
+
+    ```
+
+    * **Important:** Ensure there are **no extra spaces** before or after the `=` signs, or at the beginning/end of your key/secret values.
+
+    * **Save** the `.env` file.
+
+## How to Run the Tool
+
+1.  **Open your terminal** and navigate to the directory where `sms_cli.py` and `.env` are located (e.g., `D:\sms-project`).
+
+    ```
+    cd D:\sms-project
+
+    ```
+
+2.  **Run the Python script:**
+
+    ```
+    python sms_cli.py
+
+    ```
+
+    (If `python` doesn't work, try `python3 sms_cli.py`)
+
+## Using the Tool
+
+Once the script starts, you will see a menu:
